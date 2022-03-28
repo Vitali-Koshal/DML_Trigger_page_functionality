@@ -1,0 +1,18 @@
+<apex:page controller="AccountCustomController">
+    <apex:form>
+        <apex:pageBlock>
+            <apex:pageBlockSection>
+
+            </apex:pageBlockSection>
+            <apex:pageBlockSection>
+                
+            </apex:pageBlockSection>
+            <apex:pageBlockTable id="account_list" value="{! accounts}" var="acc">
+                <apex:column value="{! acc.Name}" headerValue="Account Name"/>
+                <apex:column value="{! acc.BillingCity}" headerValue="Address"/>
+                <apex:column value="{! acc.BillingCountry}" headerValue="Country"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+
+</apex:page>

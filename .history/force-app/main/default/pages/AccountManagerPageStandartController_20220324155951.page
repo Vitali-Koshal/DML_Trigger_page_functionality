@@ -1,0 +1,24 @@
+<apex:page standardController="Account">
+    <apex:form>
+        <apex:pageBlock>
+            <apex:pageBlockButtons>
+                <apex:inputText value="{! Account.Name}" >
+                    <h2>Acount name base</h2>
+                </apex:inputText>
+                <apex:commandButton value="CREATE" action="{! Save}" reRender="account_list"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection>
+                
+            </apex:pageBlockSection>
+            <apex:pageBlockTable id="account_list" value="{! accounts}" var="acc">
+                <apex:column value="{! acc.Name}" headerValue="Account Name"/>
+                <apex:column value="{! acc.BillingCity}" headerValue="City"/>
+                <apex:column value="{! acc.BillingCountry}" headerValue="Country"/>
+                <apex:column value="{! acc.Type}" headerValue="Type"/>
+                <apex:column value="{! acc.Phone}" headerValue="Phone"/>
+                <apex:column value="{! acc.Website}" headerValue="Website"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+
+</apex:page>
